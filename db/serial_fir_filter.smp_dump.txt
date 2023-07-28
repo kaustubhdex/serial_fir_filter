@@ -1,0 +1,8 @@
+
+State Machine - |serial_fir_filter|controller:dut2|states
+Name states.s3 states.s2 states.s1 states.s0 states.s4 
+states.s0 0 0 0 0 0 
+states.s1 0 0 1 1 0 
+states.s2 0 1 0 1 0 
+states.s3 1 0 0 1 0 
+states.s4 0 0 0 1 1 

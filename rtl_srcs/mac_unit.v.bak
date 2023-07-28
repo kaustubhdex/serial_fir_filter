@@ -1,0 +1,20 @@
+module mac_unit(
+	 input clk,
+    input [12:0] a_in, b_in,
+    output [24:0] sum_out
+    );
+		reg [23:0] sum_reg;
+		wire [23:0] sum_wire1, sum_wire2;
+		wire [23:0] interc;
+		wire chash;
+		wire cred;
+		
+		assign chash = 1'b0;
+		
+		multiplier dut1 (a_in, b_in, interc);
+		full_adder dut2(interc, sum_wire1, sum_wire2);
+		
+		assign sum_wire1 = sum_reg;
+		assign sum_wire2 = sum_reg;
+		
+endmodule
